@@ -1,12 +1,14 @@
 # Provable AI
 
-![License](https://img.shields.io/badge/license-Zerivox%20Source--Available-blue)
+[![License](https://img.shields.io/badge/license-Zerivox%20Source--Available-blue)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Status](https://img.shields.io/badge/status-experimental-orange)
 
-Infrastructure for cryptographically verifiable AI decisions.
+Infrastructure for **cryptographically verifiable AI decisions**.
 
 ---
 
-## What It Does
+# What It Does
 
 Provable AI converts AI loan and risk decisions into **signed proof artifacts** that regulators, auditors, and enterprise clients can **independently verify**.
 
@@ -14,7 +16,7 @@ Instead of trusting internal logs or opaque AI outputs, decisions are recorded a
 
 ---
 
-## Core Features
+# Core Features
 
 - Deterministic decision protocols
 - Governance enforcement for models, agents, and policies
@@ -26,13 +28,15 @@ Instead of trusting internal logs or opaque AI outputs, decisions are recorded a
 
 ---
 
-## Demo
+# Demo
 
 A complete step-by-step demo is provided.
 
 See:
 
+```
 docs/demo_steps.md
+```
 
 The demo shows:
 
@@ -46,11 +50,13 @@ The demo shows:
 
 ---
 
-## Architecture
+# Architecture
 
 Detailed architecture documentation:
 
+```
 docs/integration.md
+```
 
 This document explains:
 
@@ -62,11 +68,13 @@ This document explains:
 
 ---
 
-## Positioning
+# Positioning
 
 See:
 
+```
 docs/positioning.md
+```
 
 This explains how Provable AI differs from:
 
@@ -78,21 +86,21 @@ Provable AI provides **cryptographic decision verification**, not just monitorin
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```
 provable_ai/   → Core execution engine  
 server/        → API server (FastAPI)  
 tools/         → Offline verification utilities  
 tests/         → System and compiler tests  
-landing/       → Project landing page  
 docs/          → Demo, architecture, and positioning documents  
-cli.py         → Verification CLI tool
+cli.py         → Verification CLI tool  
+index.html     → Project landing page
 ```
 
 ---
 
-## Example Verification
+# Example Verification
 
 Export a proof:
 
@@ -114,7 +122,7 @@ VALID: Proof verified successfully
 
 ---
 
-## License
+# License
 
 This repository is released under the **Zerivox Source-Available License**.
 
@@ -130,10 +138,10 @@ The following uses require a **commercial license**:
 
 ---
 
-## Commercial Licensing
+# Commercial Licensing
 
 For commercial licensing, enterprise deployment, or partnerships contact:
 
 **zerivoxfounder@gmail.com**
 
-See the `LICENSE` file for full terms.# provable-ai
+See the `LICENSE` file for full terms.
