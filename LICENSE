@@ -1,0 +1,47 @@
+            ==================================================================
+                             ZYVORA SOURCE-AVAILABLE LICENSE
+                                      Version 1.0 
+            ==================================================================
+
+Copyright (c) 2026 Zyvora
+
+Permission is granted to any person obtaining a copy of this software and associated
+documentation files (the "Software") to view, download, and evaluate the Software
+for non-commercial purposes only.
+Non-commercial use includes:
+
+- Reviewing the source code
+- Running the software locally for evaluation
+- Testing the software for research or educational purposes
+
+The following activities are strictly prohibited without prior written permission
+from Zyvora:
+
+1. Using the Software in production systems
+2. Using the Software to provide services to third parties
+3. Offering the Software as part of a commercial product or service
+4. Redistributing or sublicensing the Software
+5. Creating derivative works for commercial purposes
+6. Removing or modifying copyright notices
+
+Commercial Licensing
+
+Commercial use of this software requires a paid commercial license from Zyvora.
+
+If you wish to use this software in a production environment, enterprise system,
+or commercial product, please contact:
+
+founder@zyvora.ai
+
+to obtain a commercial license.
+
+Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
