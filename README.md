@@ -28,6 +28,48 @@ Instead of trusting internal logs or opaque AI outputs, decisions are recorded a
 
 ---
 
+# Quick Start
+
+Clone the repository
+
+```
+git clone https://github.com/CODESHUB-o/provable-ai.git
+cd provable-ai
+```
+
+Create a virtual environment
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+Run the API server
+
+```
+uvicorn server.main:app --reload
+```
+
+The API will be available at:
+
+```
+http://127.0.0.1:8000
+```
+
+You can now follow the full demo:
+
+```
+docs/demo_steps.md
+```
+
+---
+
 # Demo
 
 A complete step-by-step demo is provided.
