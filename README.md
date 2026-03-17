@@ -184,6 +184,6 @@ The following uses require a **commercial license**:
 
 For commercial licensing, enterprise deployment, or partnerships contact:
 
-**zorynexfounder@gmail.com**
+**hanif@zorynex.co**
 
 See the `LICENSE` file for full terms.
