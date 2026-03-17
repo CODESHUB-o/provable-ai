@@ -81,6 +81,45 @@ section{position:relative;z-index:1}
 .check-list li::before{content:'→';color:var(--green);font-family:var(--font-mono);flex-shrink:0}
 .check-list.red li::before{color:#ff6b6b;content:'✗'}
 
+/* ── ARCHITECTURE DIAGRAM ── */
+.arch-sec{padding:100px 48px;border-top:1px solid var(--border);background:var(--off-black)}
+.arch-diagram{margin-top:56px;display:flex;justify-content:center}
+.arch-wrap{position:relative;width:100%;max-width:780px}
+
+/* diagram nodes */
+.arch-node{border-radius:10px;padding:18px 28px;text-align:center;position:relative;transition:transform .2s,box-shadow .2s}
+.arch-node:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,229,160,.08)}
+.arch-node h4{font-family:var(--font-display);font-size:15px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
+.arch-node p{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.04em}
+.arch-node.gray{background:#1e2424;border:1px solid #2e3838}
+.arch-node.gray h4{color:#c8d4d4}
+.arch-node.teal{background:linear-gradient(135deg,#0d2b22 0%,#0a2420 100%);border:1px solid var(--green-mid)}
+.arch-node.teal h4{color:var(--green)}
+.arch-node.teal p{color:rgba(0,229,160,.5)}
+
+/* arrow */
+.arch-arrow{display:flex;justify-content:center;align-items:center;height:36px;position:relative}
+.arch-arrow svg{opacity:.6}
+
+/* side branch */
+.arch-row{display:flex;align-items:center;gap:0}
+.arch-col{flex:1;display:flex;flex-direction:column}
+.arch-branch{display:flex;align-items:center;gap:0;margin-top:0}
+.branch-line{width:48px;height:1px;background:var(--green-mid)}
+.branch-arrow{display:flex;flex-direction:column;gap:24px;padding-left:0}
+
+/* legend */
+.arch-legend{display:flex;gap:28px;margin-top:40px;justify-content:center}
+.leg-item{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.leg-dot{width:14px;height:14px;border-radius:3px;flex-shrink:0}
+.leg-dot.gray{background:#1e2424;border:1px solid #2e3838}
+.leg-dot.teal{background:#0d2b22;border:1px solid var(--green-mid)}
+
+/* labels */
+.arch-side-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);position:absolute;top:0}
+.arch-side-label.left{left:0}
+.arch-side-label.right{right:0}
+
 /* HOW */
 .how{padding:100px 48px;border-top:1px solid var(--border);background:var(--off-black)}
 .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:60px}
@@ -111,6 +150,25 @@ section{position:relative;z-index:1}
 .role-tag{font-family:var(--font-mono);font-size:10px;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
 .role h3{font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
 .role p{color:var(--muted);font-size:14px;line-height:1.7}
+
+/* ── FAQ ── */
+.faq-sec{padding:100px 48px;border-top:1px solid var(--border)}
+.faq-list{margin-top:56px;display:flex;flex-direction:column;gap:2px}
+.faq-item{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--green-mid)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:26px 32px;cursor:pointer;user-select:none;gap:20px}
+.faq-q h4{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-.01em;transition:color .2s}
+.faq-item.open .faq-q h4{color:var(--green)}
+.faq-icon{font-family:var(--font-mono);font-size:20px;color:var(--green);flex-shrink:0;transition:transform .3s;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 32px 28px;color:var(--muted);font-size:15px;line-height:1.75;font-weight:300}
+.faq-a-inner strong{color:var(--white);font-weight:500}
+.faq-a-inner code{font-family:var(--font-mono);font-size:13px;color:var(--green);background:var(--off-black);padding:2px 7px;border:1px solid var(--border)}
+.faq-highlight{margin-top:16px;background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--green);padding:16px 20px;font-family:var(--font-mono);font-size:12px;line-height:1.9;color:var(--muted)}
+.faq-highlight .t-g{color:var(--green)}
+.faq-highlight .t-w{color:var(--white)}
 
 /* PILOT */
 .pilot{padding:100px 48px;border-top:1px solid var(--border)}
@@ -148,7 +206,7 @@ footer a{color:var(--green);text-decoration:none}
 
 /* RESPONSIVE */
 @media(max-width:1024px){.hero-terminal{display:none}.features-grid{grid-template-columns:repeat(2,1fr)}.pilot-box{grid-template-columns:1fr;gap:40px}}
-@media(max-width:768px){nav{padding:16px 24px}.nav-links{display:none}.hero,.concept,.how,.flow-sec,.who,.pilot{padding-left:24px;padding-right:24px}.container{padding:0 24px}.concept-grid,.roles{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.pilot-box{padding:32px 24px}footer{flex-direction:column;gap:14px;text-align:center}}
+@media(max-width:768px){nav{padding:16px 24px}.nav-links{display:none}.hero,.concept,.arch-sec,.how,.flow-sec,.who,.faq-sec,.pilot{padding-left:24px;padding-right:24px}.container{padding:0 24px}.concept-grid,.roles{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.pilot-box{padding:32px 24px}.faq-q{padding:20px 20px}.faq-a-inner{padding:0 20px 22px}footer{flex-direction:column;gap:14px;text-align:center}}
 </style>
 </head>
 <body>
@@ -254,6 +312,104 @@ footer a{color:var(--green);text-decoration:none}
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════
+     ARCHITECTURE DIAGRAM  (NEW SECTION)
+     ═══════════════════════════════════════════ -->
+<section class="arch-sec" id="architecture">
+  <div class="container">
+    <div class="sec-label">Architecture</div>
+    <h2 class="sec-h2">Sits after the decision.<br><em style="font-style:normal;color:var(--green)">Changes nothing.</em></h2>
+    <p style="color:var(--muted);font-size:17px;max-width:520px;font-weight:300;margin-bottom:0">A developer can have proof artifacts generating in an afternoon. Nothing in your pipeline changes.</p>
+
+    <div class="arch-diagram fu">
+      <div class="arch-wrap">
+
+        <!-- Side labels -->
+        <div style="display:flex;justify-content:space-between;margin-bottom:16px">
+          <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Your existing stack</span>
+          <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green)">Provable AI adds this</span>
+        </div>
+
+        <svg viewBox="0 0 780 620" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+          <defs>
+            <marker id="ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M1,1 L7,4 L1,7 Z" fill="#4a6060"/>
+            </marker>
+            <marker id="ahg" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M1,1 L7,4 L1,7 Z" fill="#00e5a0"/>
+            </marker>
+          </defs>
+
+          <!-- AI System (gray) -->
+          <rect x="190" y="20" width="300" height="72" rx="10" fill="#1a2424" stroke="#2e3838" stroke-width="1.5"/>
+          <text x="340" y="50" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#c8d4d4" text-anchor="middle">AI system</text>
+          <text x="340" y="70" font-family="DM Mono,monospace" font-size="11" fill="rgba(200,212,212,0.45)" text-anchor="middle">Model + input data</text>
+
+          <!-- Arrow 1 -->
+          <line x1="340" y1="92" x2="340" y2="138" stroke="#4a6060" stroke-width="1.5" marker-end="url(#ah)"/>
+
+          <!-- Decision (gray) -->
+          <rect x="190" y="140" width="300" height="72" rx="10" fill="#1a2424" stroke="#2e3838" stroke-width="1.5"/>
+          <text x="340" y="170" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#c8d4d4" text-anchor="middle">Decision</text>
+          <text x="340" y="190" font-family="DM Mono,monospace" font-size="11" fill="rgba(200,212,212,0.45)" text-anchor="middle">Model output + policy applied</text>
+
+          <!-- Arrow 2 -->
+          <line x1="340" y1="212" x2="340" y2="258" stroke="#4a6060" stroke-width="1.5" marker-end="url(#ah)"/>
+
+          <!-- Provable AI layer (teal) -->
+          <rect x="130" y="260" width="420" height="72" rx="10" fill="#0d2b22" stroke="#00e5a040" stroke-width="1.5"/>
+          <text x="340" y="290" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#00e5a0" text-anchor="middle">Provable AI layer</text>
+          <text x="340" y="312" font-family="DM Mono,monospace" font-size="11" fill="rgba(0,229,160,0.5)" text-anchor="middle">Deterministic + signed · sits after decision · zero changes</text>
+
+          <!-- Right bracket for "Provable AI adds this" -->
+          <line x1="568" y1="260" x2="580" y2="260" stroke="#00e5a040" stroke-width="1"/>
+          <line x1="580" y1="260" x2="580" y2="500" stroke="#00e5a040" stroke-width="1"/>
+          <line x1="568" y1="500" x2="580" y2="500" stroke="#00e5a040" stroke-width="1"/>
+
+          <!-- Arrow 3 -->
+          <line x1="340" y1="332" x2="340" y2="378" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#ahg)"/>
+
+          <!-- Cryptographic ledger (teal) -->
+          <rect x="130" y="380" width="420" height="72" rx="10" fill="#0d2b22" stroke="#00e5a040" stroke-width="1.5"/>
+          <text x="340" y="410" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#00e5a0" text-anchor="middle">Cryptographic ledger entry</text>
+          <text x="340" y="432" font-family="DM Mono,monospace" font-size="11" fill="rgba(0,229,160,0.5)" text-anchor="middle">prev_hash + curr_hash + signature</text>
+
+          <!-- Arrow 4 -->
+          <line x1="340" y1="452" x2="340" y2="498" stroke="#4a6060" stroke-width="1.5" marker-end="url(#ah)"/>
+
+          <!-- Storage (gray) -->
+          <rect x="130" y="500" width="300" height="72" rx="10" fill="#1a2424" stroke="#2e3838" stroke-width="1.5"/>
+          <text x="280" y="530" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#c8d4d4" text-anchor="middle">Storage / logs</text>
+          <text x="280" y="552" font-family="DM Mono,monospace" font-size="11" fill="rgba(200,212,212,0.45)" text-anchor="middle">Your existing infrastructure</text>
+
+          <!-- Branch arrow right from Storage -->
+          <line x1="430" y1="536" x2="510" y2="536" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#ahg)"/>
+
+          <!-- Proof export (teal) -->
+          <rect x="512" y="500" width="210" height="72" rx="10" fill="#0d2b22" stroke="#00e5a040" stroke-width="1.5"/>
+          <text x="617" y="530" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#00e5a0" text-anchor="middle">Proof export</text>
+          <text x="617" y="552" font-family="DM Mono,monospace" font-size="11" fill="rgba(0,229,160,0.5)" text-anchor="middle">proof.json</text>
+
+          <!-- Arrow down from Proof export -->
+          <line x1="617" y1="572" x2="617" y2="592" stroke="#00e5a0" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#ahg)"/>
+
+          <!-- Independent verification (teal) — at bottom right -->
+          <rect x="460" y="594" width="316" height="22" rx="6" fill="#0d2b22" stroke="#00e5a040" stroke-width="1.2"/>
+          <text x="618" y="609" font-family="DM Mono,monospace" font-size="10.5" fill="rgba(0,229,160,0.7)" text-anchor="middle">python cli.py verify proof.json</text>
+        </svg>
+
+        <!-- Legend -->
+        <div class="arch-legend">
+          <div class="leg-item"><div class="leg-dot gray"></div>Your existing stack</div>
+          <div class="leg-item"><div class="leg-dot teal"></div>Provable AI layer</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════ -->
 
 <!-- FEATURES -->
 <section class="how" id="features">
@@ -387,6 +543,99 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════
+     FAQ SECTION  (NEW SECTION)
+     ═══════════════════════════════════════════ -->
+<section class="faq-sec" id="faq">
+  <div class="container">
+    <div class="sec-label">Common questions</div>
+    <h2 class="sec-h2">Everything you need<br>to know.</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4>How long does integration take?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <strong>A developer can have proof artifacts generating in an afternoon.</strong> Provable AI sits after your existing AI decisions — nothing changes in your pipeline.
+            <div class="faq-highlight">
+              <div><span class="t-m">Step 1 </span><span class="t-w">pip install + uvicorn server.main:app</span><span class="t-m">  →  5 min</span></div>
+              <div><span class="t-m">Step 2 </span><span class="t-w">Point your AI output to the API endpoint</span><span class="t-m">  →  1–2 hrs</span></div>
+              <div><span class="t-m">Step 3 </span><span class="t-w">Test proof export + verify</span><span class="t-m">  →  30 min</span></div>
+              <div style="margin-top:8px"><span class="t-g">Total: half a day for one developer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4>Does it change anything in my existing AI pipeline?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <strong>Nothing changes.</strong> Provable AI is a layer that sits <em>after</em> the decision. Your model makes the decision exactly as it does today. Provable AI records and signs what already happened — it doesn't touch your inference pipeline, your model weights, or your existing infrastructure.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4>Does the verifier need access to our servers?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <strong>No server access required — ever.</strong> The proof artifact is a self-contained signed JSON file. Regulators and auditors run <code>python cli.py verify proof.json</code> entirely offline. The proof either verifies cryptographically or it doesn't. No back-and-forth, no access requests.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4>What regulations does this support?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            Provable AI is built for teams operating under <strong>SR 11-7</strong> (model risk management), <strong>EU AI Act</strong> high-risk system requirements, and <strong>CFPB</strong> adverse action explainability obligations. The proof artifact provides the cryptographic decision trail these frameworks require — with documentation support included in the pilot.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4>What happens if a model is updated between decisions?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            Every proof artifact captures the <strong>exact model version</strong> at decision time. If a new model version is deployed, the governance layer detects the version change and the new version must be approved before it can execute. Unauthorized model versions are blocked at runtime — so the audit trail is always accurate, even across model updates.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h4>Is the source code available?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            Yes. The full source is available on <a href="https://github.com/futureaihub/provable-ai" target="_blank" style="color:var(--green)">GitHub</a> under the Zorynex Source-Available License. You can view, download, and evaluate the software for non-commercial purposes. Production deployment and enterprise integration require a commercial license — contact <a href="mailto:hanif@zorynex.co" style="color:var(--green)">hanif@zorynex.co</a>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════ -->
+
 <!-- PILOT -->
 <section class="pilot" id="pilot">
   <div class="container">
@@ -447,6 +696,7 @@ footer a{color:var(--green);text-decoration:none}
 </footer>
 
 <script>
+// Fade-up on scroll
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) setTimeout(() => e.target.classList.add('vis'), i * 80);
@@ -454,6 +704,7 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 
+// Form submit
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-btn');
@@ -463,6 +714,16 @@ function handleSubmit(e) {
     btn.textContent = 'Sent ✓';
     document.getElementById('msg').style.display = 'block';
   }, 900);
+}
+
+// FAQ accordion
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  // close all
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  // open clicked if it was closed
+  if (!isOpen) item.classList.add('open');
 }
 </script>
 </body>
