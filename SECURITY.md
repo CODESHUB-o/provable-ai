@@ -4,7 +4,7 @@
 
 If you discover a security vulnerability in Provable AI, please report it privately.
 
-Email: zorynexfounder@gmail.com
+Email: hanif@zorynex.co
 
 Please do not open public issues for security vulnerabilities.
 
