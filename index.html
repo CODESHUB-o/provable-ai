@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="UlYcHD25Cl3ctedGHhCN4tATJCQ94ilIWhhuhJfp1Rg" />  
+<meta name="google-site-verification" content="UlYcHD25Cl3ctedGHhCN4tATJCQ94ilIWhhuhJfp1Rg" />
 <title>Zorynex — Provable AI Infrastructure</title>
 <meta name="description" content="Cryptographically verifiable AI decisions. Every decision your AI makes becomes a signed proof artifact — independently verifiable by regulators, auditors, and enterprise clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -627,7 +627,7 @@ footer a{color:var(--green);text-decoration:none}
         </div>
         <div class="faq-a">
           <div class="faq-a-inner">
-            Yes. The full source is available on <a href="https://github.com/futureaihub/provable-ai" target="_blank" style="color:var(--green)">GitHub</a> under the Zorynex Source-Available License. You can view, download, and evaluate the software for non-commercial purposes. Production deployment and enterprise integration require a commercial license — contact <a href="mailto:hanif@zorynex.co" style="color:var(--green)">hanif@zorynex.co</a>.
+            Yes. The full source is available on <a href="https://github.com/futureaihub/provable-ai" target="_blank" style="color:var(--green)">GitHub</a> under the Zorynex Source-Available License. You can view, download, and evaluate the software for non-commercial purposes. Production deployment and enterprise integration require a commercial license — contact <a href="/cdn-cgi/l/email-protection#6109000f0807211b0e13180f04194f020e" style="color:var(--green)"><span class="__cf_email__" data-cfemail="5d353c33343b1d27322f24333825733e32">[email&#160;protected]</span></a>.
           </div>
         </div>
       </div>
@@ -658,16 +658,16 @@ footer a{color:var(--green);text-decoration:none}
         <a href="https://github.com/futureaihub/provable-ai" target="_blank" class="btn-ghost" style="display:inline-block;margin-top:8px">View GitHub repo →</a>
       </div>
       <div>
-        <form class="form" onsubmit="handleSubmit(event)">
+        <form class="form" action="https://formspree.io/f/maqpajvw" method="POST" onsubmit="handleSubmit(event)">
           <div class="form-row">
-            <div class="fg"><label>First name</label><input type="text" placeholder="Annie" required></div>
-            <div class="fg"><label>Last name</label><input type="text" placeholder="Delgado" required></div>
+            <div class="fg"><label>First name</label><input type="text" name="first_name" placeholder="Annie" required></div>
+            <div class="fg"><label>Last name</label><input type="text" name="last_name" placeholder="Delgado" required></div>
           </div>
-          <div class="fg"><label>Work email</label><input type="email" placeholder="annie@upstart.com" required></div>
-          <div class="fg"><label>Company</label><input type="text" placeholder="Upstart" required></div>
+          <div class="fg"><label>Work email</label><input type="email" name="email" placeholder="annie@upstart.com" required></div>
+          <div class="fg"><label>Company</label><input type="text" name="company" placeholder="Upstart" required></div>
           <div class="fg">
             <label>Your role</label>
-            <select required>
+            <select name="role" required>
               <option value="" disabled selected>Select your role</option>
               <option>Chief Risk Officer / CRO</option>
               <option>Head of Model Risk</option>
@@ -680,8 +680,10 @@ footer a{color:var(--green);text-decoration:none}
           </div>
           <div class="fg">
             <label>Biggest AI audit challenge</label>
-            <textarea placeholder="Tell us about your current model governance setup and the gap you're trying to close..."></textarea>
+            <textarea name="ai_audit_challenge" placeholder="Tell us about your current model governance setup and the gap you're trying to close..."></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New Pilot Application — Zorynex">
+          <input type="hidden" name="_next" value="https://zorynex.co">
           <button type="submit" class="form-btn">Apply for pilot →</button>
           <p id="msg">✓ Received. Hanif will reply within 24 hours.</p>
         </form>
@@ -692,11 +694,11 @@ footer a{color:var(--green);text-decoration:none}
 
 <footer>
   <div class="footer-logo">Zorynex<span>.</span></div>
-  <p>Provable AI Infrastructure &middot; <a href="mailto:hanif@zorynex.co">hanif@zorynex.co</a></p>
+  <p>Provable AI Infrastructure &middot; <a href="/cdn-cgi/l/email-protection#4129202f2827013b2e33382f24396f222e"><span class="__cf_email__" data-cfemail="e38b828d8a85a3998c919a8d869bcd808c">[email&#160;protected]</span></a></p>
   <p>© 2026 Zorynex &middot; <a href="https://github.com/futureaihub/provable-ai" target="_blank">GitHub</a></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Fade-up on scroll
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
@@ -707,25 +709,9 @@ document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 
 // Form submit
 function handleSubmit(e) {
-  e.preventDefault();
   const btn = e.target.querySelector('.form-btn');
   btn.textContent = 'Sending...';
   btn.disabled = true;
   setTimeout(() => {
     btn.textContent = 'Sent ✓';
-    document.getElementById('msg').style.display = 'block';
-  }, 900);
-}
-
-// FAQ accordion
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  // close all
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  // open clicked if it was closed
-  if (!isOpen) item.classList.add('open');
-}
-</script>
-</body>
-</html>
+    document.getElementById('msg').style.dis
