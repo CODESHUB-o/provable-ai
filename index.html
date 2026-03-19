@@ -20,8 +20,6 @@
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,229,160,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,160,.015) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(8,9,9,.88);backdrop-filter:blur(20px)}
 .nav-logo{font-family:var(--font-display);font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--white);text-decoration:none}
 .nav-logo span{color:var(--green)}
@@ -30,8 +28,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:fl
 .nav-links a:hover{color:var(--green)}
 .nav-cta{font-family:var(--font-mono);font-size:12px;padding:10px 20px;border:1px solid var(--green);color:var(--green);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
 .nav-cta:hover{background:var(--green);color:var(--black)}
-
-/* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 48px 80px;overflow:hidden}
 .hero-glow{position:absolute;top:30%;left:40%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(0,229,160,.07) 0%,transparent 70%);pointer-events:none}
 .hero-content{flex:1;max-width:680px;position:relative;z-index:1}
@@ -48,8 +44,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:fl
 .hero-stats{display:flex;gap:48px}
 .stat-num{font-family:var(--font-display);font-size:32px;font-weight:800;color:var(--green);letter-spacing:-.02em}
 .stat-label{font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
-
-/* TERMINAL */
 .hero-terminal{position:absolute;right:48px;top:50%;transform:translateY(-50%);width:440px;background:var(--card);border:1px solid var(--border);font-family:var(--font-mono);font-size:12.5px;animation:fadeInRight .9s ease .2s both;z-index:1}
 @keyframes fadeInRight{from{opacity:0;transform:translateY(-50%) translateX(30px)}to{opacity:1;transform:translateY(-50%) translateX(0)}}
 .tbar{padding:10px 16px;background:var(--off-black);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
@@ -59,15 +53,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:fl
 .t-m{color:var(--muted)}.t-g{color:var(--green)}.t-w{color:var(--white)}.t-d{color:#2a3636}
 .cursor{display:inline-block;width:8px;height:13px;background:var(--green);vertical-align:middle;animation:blink 1s step-end infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-
-/* SECTIONS */
 section{position:relative;z-index:1}
 .container{max-width:1200px;margin:0 auto;padding:0 48px}
 .sec-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .sec-label::before{content:'';display:block;width:24px;height:1px;background:var(--green)}
 .sec-h2{font-family:var(--font-display);font-size:clamp(34px,4vw,54px);font-weight:800;letter-spacing:-.03em;margin-bottom:16px}
-
-/* PROOF CONCEPT */
 .concept{padding:100px 48px;border-top:1px solid var(--border)}
 .concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:60px}
 .c-card{background:var(--card);border:1px solid var(--border);padding:40px;position:relative}
@@ -81,8 +71,6 @@ section{position:relative;z-index:1}
 .check-list li{font-size:14px;color:var(--muted);display:flex;align-items:flex-start;gap:10px}
 .check-list li::before{content:'→';color:var(--green);font-family:var(--font-mono);flex-shrink:0}
 .check-list.red li::before{color:#ff6b6b;content:'✗'}
-
-/* ARCHITECTURE DIAGRAM */
 .arch-sec{padding:100px 48px;border-top:1px solid var(--border);background:var(--off-black)}
 .arch-diagram{margin-top:56px;display:flex;justify-content:center}
 .arch-wrap{position:relative;width:100%;max-width:780px}
@@ -91,8 +79,6 @@ section{position:relative;z-index:1}
 .leg-dot{width:14px;height:14px;border-radius:3px;flex-shrink:0}
 .leg-dot.gray{background:#1e2424;border:1px solid #2e3838}
 .leg-dot.teal{background:#0d2b22;border:1px solid var(--green-mid)}
-
-/* HOW */
 .how{padding:100px 48px;border-top:1px solid var(--border);background:var(--off-black)}
 .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:60px}
 .feat{background:var(--card);padding:30px 26px;transition:background .2s;position:relative}
@@ -101,8 +87,6 @@ section{position:relative;z-index:1}
 .feat h4{font-family:var(--font-display);font-size:15px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
 .feat p{font-size:13px;color:var(--muted);line-height:1.6}
 .feat code{color:var(--green);font-family:var(--font-mono);font-size:12px}
-
-/* FLOW */
 .flow-sec{padding:100px 48px;border-top:1px solid var(--border)}
 .flow{display:flex;align-items:stretch;overflow-x:auto;margin:60px 0 48px}
 .flow-step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--border);border-right:none;padding:26px 22px;position:relative}
@@ -113,8 +97,6 @@ section{position:relative;z-index:1}
 .flow-step h4{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:5px}
 .flow-step p{font-size:12px;color:var(--muted);line-height:1.5}
 .proof-block{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:28px 32px;font-family:var(--font-mono);font-size:13px;line-height:2;max-width:660px}
-
-/* WHO */
 .who{padding:100px 48px;border-top:1px solid var(--border);background:var(--off-black)}
 .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px}
 .role{background:var(--card);border:1px solid var(--border);padding:36px 30px;transition:border-color .2s}
@@ -122,8 +104,6 @@ section{position:relative;z-index:1}
 .role-tag{font-family:var(--font-mono);font-size:10px;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
 .role h3{font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
 .role p{color:var(--muted);font-size:14px;line-height:1.7}
-
-/* FAQ */
 .faq-sec{padding:100px 48px;border-top:1px solid var(--border)}
 .faq-list{margin-top:56px;display:flex;flex-direction:column;gap:2px}
 .faq-item{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:border-color .2s}
@@ -141,8 +121,6 @@ section{position:relative;z-index:1}
 .faq-highlight{margin-top:16px;background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--green);padding:16px 20px;font-family:var(--font-mono);font-size:12px;line-height:1.9;color:var(--muted)}
 .faq-highlight .t-g{color:var(--green)}
 .faq-highlight .t-w{color:var(--white)}
-
-/* PILOT */
 .pilot{padding:100px 48px;border-top:1px solid var(--border)}
 .pilot-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .pilot h2{font-family:var(--font-display);font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-.03em;margin-bottom:16px}
@@ -151,8 +129,6 @@ section{position:relative;z-index:1}
 .pilot-list{list-style:none;display:flex;flex-direction:column;gap:14px}
 .pilot-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px}
 .pilot-list li .ck{color:var(--green);font-family:var(--font-mono);font-size:12px;flex-shrink:0;margin-top:3px}
-
-/* FORM */
 .form{display:flex;flex-direction:column;gap:14px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fg{display:flex;flex-direction:column;gap:5px}
@@ -164,25 +140,18 @@ section{position:relative;z-index:1}
 .form-btn{font-family:var(--font-mono);font-size:12px;padding:15px 30px;background:var(--green);color:var(--black);border:none;cursor:pointer;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;align-self:flex-start}
 .form-btn:hover{background:#00ffb3}
 #msg{font-family:var(--font-mono);font-size:12px;color:var(--green);margin-top:6px;display:none}
-
-/* FOOTER */
 footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-items:center;justify-content:space-between}
 .footer-logo{font-family:var(--font-display);font-size:16px;font-weight:800;letter-spacing:-.02em}
 .footer-logo span{color:var(--green)}
 footer p,footer a{font-family:var(--font-mono);font-size:11px;color:var(--muted)}
 footer a{color:var(--green);text-decoration:none}
-
-/* FADE UP */
 .fu{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .fu.vis{opacity:1;transform:translateY(0)}
-
-/* RESPONSIVE */
 @media(max-width:1024px){.hero-terminal{display:none}.features-grid{grid-template-columns:repeat(2,1fr)}.pilot-box{grid-template-columns:1fr;gap:40px}}
 @media(max-width:768px){nav{padding:16px 24px}.nav-links{display:none}.hero,.concept,.arch-sec,.how,.flow-sec,.who,.faq-sec,.pilot{padding-left:24px;padding-right:24px}.container{padding:0 24px}.concept-grid,.roles{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.pilot-box{padding:32px 24px}.faq-q{padding:20px 20px}.faq-a-inner{padding:0 20px 22px}footer{flex-direction:column;gap:14px;text-align:center}}
 </style>
 </head>
 <body>
-
 <nav>
   <a href="#" class="nav-logo">Zorynex<span>.</span></a>
   <ul class="nav-links">
@@ -194,33 +163,22 @@ footer a{color:var(--green);text-decoration:none}
   <a href="#pilot" class="nav-cta">Apply for pilot</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-content">
     <div class="hero-tag">Provable AI Infrastructure</div>
     <h1>AI decisions<br>auditors can<br><em>verify.</em></h1>
-    <p class="hero-sub">Every AI decision your system makes becomes a cryptographic proof artifact — independently verifiable by regulators, auditors, and enterprise clients. No trust required.</p>
+    <p class="hero-sub">Every AI decision your system makes becomes a cryptographic proof artifact &mdash; independently verifiable by regulators, auditors, and enterprise clients. No trust required.</p>
     <div class="hero-actions">
       <a href="#pilot" class="btn-primary">Apply for 90-day pilot</a>
       <a href="https://github.com/futureaihub/provable-ai" target="_blank" class="btn-ghost">View on GitHub &rarr;</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <div class="stat-num">7</div>
-        <div class="stat-label">Core features</div>
-      </div>
-      <div>
-        <div class="stat-num">90</div>
-        <div class="stat-label">Day pilot</div>
-      </div>
-      <div>
-        <div class="stat-num">3</div>
-        <div class="stat-label">Spots available</div>
-      </div>
+      <div><div class="stat-num">7</div><div class="stat-label">Core features</div></div>
+      <div><div class="stat-num">90</div><div class="stat-label">Day pilot</div></div>
+      <div><div class="stat-num">3</div><div class="stat-label">Spots available</div></div>
     </div>
   </div>
-
   <div class="hero-terminal">
     <div class="tbar">
       <div class="tdot" style="background:#ff5f57"></div>
@@ -230,14 +188,14 @@ footer a{color:var(--green);text-decoration:none}
     </div>
     <div class="tbody">
       <div><span class="t-m">$</span> <span class="t-w">python cli.py verify proof_loan_9284.json</span></div>
-      <div class="t-d">────────────────────────────────</div>
+      <div class="t-d">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</div>
       <div><span class="t-m">loading   </span><span class="t-w">proof artifact...</span></div>
       <div><span class="t-m">checking  </span><span class="t-w">protocol_hash</span></div>
       <div><span class="t-m">checking  </span><span class="t-w">governance_gate</span></div>
       <div><span class="t-m">checking  </span><span class="t-w">ledger_integrity</span></div>
       <div><span class="t-m">checking  </span><span class="t-w">merkle_root</span></div>
       <div><span class="t-m">running   </span><span class="t-w">tamper_detection</span></div>
-      <div class="t-d">────────────────────────────────</div>
+      <div class="t-d">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</div>
       <div><span class="t-g">&#10003; VALID: Proof verified successfully</span></div>
       <br>
       <div><span class="t-m">  protocol_hash   </span><span class="t-w">7f3a9c2b4d1e...</span></div>
@@ -246,13 +204,12 @@ footer a{color:var(--green);text-decoration:none}
       <div><span class="t-m">  tamper_detected </span><span class="t-g">false</span></div>
       <div><span class="t-m">  final_state     </span><span class="t-w">approved</span></div>
       <div><span class="t-m">  verifier        </span><span class="t-w">independent (offline)</span></div>
-      <div class="t-d">────────────────────────────────</div>
+      <div class="t-d">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</div>
       <div><span class="t-m">$</span> <span class="cursor"></span></div>
     </div>
   </div>
 </section>
 
-<!-- CONCEPT -->
 <section class="concept" id="concept">
   <div class="container">
     <div class="sec-label">The problem</div>
@@ -285,13 +242,11 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
-<!-- ARCHITECTURE -->
 <section class="arch-sec" id="architecture">
   <div class="container">
     <div class="sec-label">Architecture</div>
     <h2 class="sec-h2">Sits after the decision.<br><em style="font-style:normal;color:var(--green)">Changes nothing.</em></h2>
     <p style="color:var(--muted);font-size:17px;max-width:520px;font-weight:300;margin-bottom:0">A developer can have proof artifacts generating in an afternoon. Nothing in your pipeline changes.</p>
-
     <div class="arch-diagram fu">
       <div class="arch-wrap">
         <div style="display:flex;justify-content:space-between;margin-bottom:16px">
@@ -300,12 +255,8 @@ footer a{color:var(--green);text-decoration:none}
         </div>
         <svg viewBox="0 0 780 620" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
           <defs>
-            <marker id="ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-              <path d="M1,1 L7,4 L1,7 Z" fill="#4a6060"/>
-            </marker>
-            <marker id="ahg" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-              <path d="M1,1 L7,4 L1,7 Z" fill="#00e5a0"/>
-            </marker>
+            <marker id="ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7 Z" fill="#4a6060"/></marker>
+            <marker id="ahg" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7 Z" fill="#00e5a0"/></marker>
           </defs>
           <rect x="190" y="20" width="300" height="72" rx="10" fill="#1a2424" stroke="#2e3838" stroke-width="1.5"/>
           <text x="340" y="50" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#c8d4d4" text-anchor="middle">AI system</text>
@@ -317,7 +268,7 @@ footer a{color:var(--green);text-decoration:none}
           <line x1="340" y1="212" x2="340" y2="258" stroke="#4a6060" stroke-width="1.5" marker-end="url(#ah)"/>
           <rect x="130" y="260" width="420" height="72" rx="10" fill="#0d2b22" stroke="#00e5a040" stroke-width="1.5"/>
           <text x="340" y="290" font-family="Syne,sans-serif" font-size="15" font-weight="700" fill="#00e5a0" text-anchor="middle">Provable AI layer</text>
-          <text x="340" y="312" font-family="DM Mono,monospace" font-size="11" fill="rgba(0,229,160,0.5)" text-anchor="middle">Deterministic + signed &middot; sits after decision &middot; zero changes</text>
+          <text x="340" y="312" font-family="DM Mono,monospace" font-size="11" fill="rgba(0,229,160,0.5)" text-anchor="middle">Deterministic + signed · sits after decision · zero changes</text>
           <line x1="568" y1="260" x2="580" y2="260" stroke="#00e5a040" stroke-width="1"/>
           <line x1="580" y1="260" x2="580" y2="500" stroke="#00e5a040" stroke-width="1"/>
           <line x1="568" y1="500" x2="580" y2="500" stroke="#00e5a040" stroke-width="1"/>
@@ -346,83 +297,33 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="how" id="features">
   <div class="container">
     <div class="sec-label">Core features</div>
     <h2 class="sec-h2">7 features.<br>One verifiable system.</h2>
     <div class="features-grid">
-      <div class="feat fu">
-        <div class="feat-num">01</div>
-        <h4>Deterministic Decision Protocols</h4>
-        <p>Workflow specs compile to a deterministic protocol hash. Same spec &rarr; same hash across all environments. Proves execution consistency.</p>
-      </div>
-      <div class="feat fu">
-        <div class="feat-num">02</div>
-        <h4>Governance Enforcement</h4>
-        <p>Controls which models, agents, and policies are approved to execute. Unauthorized versions are blocked at runtime automatically.</p>
-      </div>
-      <div class="feat fu">
-        <div class="feat-num">03</div>
-        <h4>Cryptographic Execution Ledger</h4>
-        <p>Each decision transition is signed with a hash chain: previous hash + current hash + signature. Tamper-evident by construction.</p>
-      </div>
-      <div class="feat fu">
-        <div class="feat-num">04</div>
-        <h4>Signed Proof Artifact Export</h4>
-        <p>Every decision exports a signed JSON proof: <code>curl /ledger/&lt;id&gt;/export &gt; proof.json</code>. Contains full evidence chain.</p>
-      </div>
-      <div class="feat fu">
-        <div class="feat-num">05</div>
-        <h4>Independent Verification CLI</h4>
-        <p>Anyone can run <code>python cli.py verify proof.json</code> offline. No server access required. Proof either verifies or it doesn't.</p>
-      </div>
-      <div class="feat fu">
-        <div class="feat-num">06</div>
-        <h4>Replay-based Tamper Detection</h4>
-        <p>Reconstruct any execution history and replay it exactly. If the output differs from the recorded proof &mdash; tamper detected.</p>
-      </div>
-      <div class="feat fu">
-        <div class="feat-num">07</div>
-        <h4>Environment Drift Detection</h4>
-        <p>Compare system roots across dev, staging, and production. Detects governance drift before deployment &mdash; not after a failed audit.</p>
-      </div>
+      <div class="feat fu"><div class="feat-num">01</div><h4>Deterministic Decision Protocols</h4><p>Workflow specs compile to a deterministic protocol hash. Same spec &rarr; same hash across all environments. Proves execution consistency.</p></div>
+      <div class="feat fu"><div class="feat-num">02</div><h4>Governance Enforcement</h4><p>Controls which models, agents, and policies are approved to execute. Unauthorized versions are blocked at runtime automatically.</p></div>
+      <div class="feat fu"><div class="feat-num">03</div><h4>Cryptographic Execution Ledger</h4><p>Each decision transition is signed with a hash chain: previous hash + current hash + signature. Tamper-evident by construction.</p></div>
+      <div class="feat fu"><div class="feat-num">04</div><h4>Signed Proof Artifact Export</h4><p>Every decision exports a signed JSON proof: <code>curl /ledger/&lt;id&gt;/export &gt; proof.json</code>. Contains full evidence chain.</p></div>
+      <div class="feat fu"><div class="feat-num">05</div><h4>Independent Verification CLI</h4><p>Anyone can run <code>python cli.py verify proof.json</code> offline. No server access required. Proof either verifies or it doesn't.</p></div>
+      <div class="feat fu"><div class="feat-num">06</div><h4>Replay-based Tamper Detection</h4><p>Reconstruct any execution history and replay it exactly. If the output differs from the recorded proof &mdash; tamper detected.</p></div>
+      <div class="feat fu"><div class="feat-num">07</div><h4>Environment Drift Detection</h4><p>Compare system roots across dev, staging, and production. Detects governance drift before deployment &mdash; not after a failed audit.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FLOW -->
 <section class="flow-sec" id="flow">
   <div class="container">
     <div class="sec-label">Decision flow</div>
     <h2 class="sec-h2">From AI decision<br>to verified evidence.</h2>
     <p style="color:var(--muted);font-size:17px;max-width:520px;font-weight:300;margin-bottom:0">Every decision in your system follows this chain &mdash; automatically, at the moment it fires.</p>
     <div class="flow">
-      <div class="flow-step">
-        <div class="flow-icon">STEP 01</div>
-        <h4>AI Decision</h4>
-        <p>Model processes input, produces output via FastAPI server</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-icon">STEP 02</div>
-        <h4>Governance Enforced</h4>
-        <p>Gate validates approved model + agent + policy version</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-icon">STEP 03</div>
-        <h4>Ledger Recorded</h4>
-        <p>Signed hash chain entry created and stored</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-icon">STEP 04</div>
-        <h4>Proof Exported</h4>
-        <p>Signed JSON artifact with full evidence chain</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-icon">STEP 05</div>
-        <h4>Independently Verified</h4>
-        <p>Anyone runs CLI &mdash; no server access needed</p>
-      </div>
+      <div class="flow-step"><div class="flow-icon">STEP 01</div><h4>AI Decision</h4><p>Model processes input, produces output via FastAPI server</p></div>
+      <div class="flow-step"><div class="flow-icon">STEP 02</div><h4>Governance Enforced</h4><p>Gate validates approved model + agent + policy version</p></div>
+      <div class="flow-step"><div class="flow-icon">STEP 03</div><h4>Ledger Recorded</h4><p>Signed hash chain entry created and stored</p></div>
+      <div class="flow-step"><div class="flow-icon">STEP 04</div><h4>Proof Exported</h4><p>Signed JSON artifact with full evidence chain</p></div>
+      <div class="flow-step"><div class="flow-icon">STEP 05</div><h4>Independently Verified</h4><p>Anyone runs CLI &mdash; no server access needed</p></div>
     </div>
     <div class="proof-block">
       <div><span class="t-m">$ </span><span class="t-w">curl http://localhost:8000/ledger/instance_9284/export > proof.json</span></div>
@@ -438,7 +339,6 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
-<!-- WHO -->
 <section class="who" id="who">
   <div class="container">
     <div class="sec-label">Who it's for</div>
@@ -478,89 +378,47 @@ footer a{color:var(--green);text-decoration:none}
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq-sec" id="faq">
   <div class="container">
     <div class="sec-label">Common questions</div>
     <h2 class="sec-h2">Everything you need<br>to know.</h2>
     <div class="faq-list">
       <div class="faq-item open">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h4>How long does integration take?</h4>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <strong>A developer can have proof artifacts generating in an afternoon.</strong> Provable AI sits after your existing AI decisions &mdash; nothing changes in your pipeline.
-            <div class="faq-highlight">
-              <div><span class="t-m">Step 1 </span><span class="t-w">pip install + uvicorn server.main:app</span><span class="t-m">  &rarr;  5 min</span></div>
-              <div><span class="t-m">Step 2 </span><span class="t-w">Point your AI output to the API endpoint</span><span class="t-m">  &rarr;  1&ndash;2 hrs</span></div>
-              <div><span class="t-m">Step 3 </span><span class="t-w">Test proof export + verify</span><span class="t-m">  &rarr;  30 min</span></div>
-              <div style="margin-top:8px"><span class="t-g">Total: half a day for one developer</span></div>
-            </div>
+        <div class="faq-q" onclick="toggleFaq(this)"><h4>How long does integration take?</h4><span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <strong>A developer can have proof artifacts generating in an afternoon.</strong> Provable AI sits after your existing AI decisions &mdash; nothing changes in your pipeline.
+          <div class="faq-highlight">
+            <div><span class="t-m">Step 1 </span><span class="t-w">pip install + uvicorn server.main:app</span><span class="t-m">  &rarr;  5 min</span></div>
+            <div><span class="t-m">Step 2 </span><span class="t-w">Point your AI output to the API endpoint</span><span class="t-m">  &rarr;  1&ndash;2 hrs</span></div>
+            <div><span class="t-m">Step 3 </span><span class="t-w">Test proof export + verify</span><span class="t-m">  &rarr;  30 min</span></div>
+            <div style="margin-top:8px"><span class="t-g">Total: half a day for one developer</span></div>
           </div>
-        </div>
+        </div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h4>Does it change anything in my existing AI pipeline?</h4>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <strong>Nothing changes.</strong> Provable AI is a layer that sits <em>after</em> the decision. Your model makes the decision exactly as it does today. Provable AI records and signs what already happened &mdash; it doesn't touch your inference pipeline, your model weights, or your existing infrastructure.
-          </div>
-        </div>
+        <div class="faq-q" onclick="toggleFaq(this)"><h4>Does it change anything in my existing AI pipeline?</h4><span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner"><strong>Nothing changes.</strong> Provable AI is a layer that sits <em>after</em> the decision. Your model makes the decision exactly as it does today. Provable AI records and signs what already happened &mdash; it doesn't touch your inference pipeline, your model weights, or your existing infrastructure.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h4>Does the verifier need access to our servers?</h4>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <strong>No server access required &mdash; ever.</strong> The proof artifact is a self-contained signed JSON file. Regulators and auditors run <code>python cli.py verify proof.json</code> entirely offline. The proof either verifies cryptographically or it doesn't. No back-and-forth, no access requests.
-          </div>
-        </div>
+        <div class="faq-q" onclick="toggleFaq(this)"><h4>Does the verifier need access to our servers?</h4><span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner"><strong>No server access required &mdash; ever.</strong> The proof artifact is a self-contained signed JSON file. Regulators and auditors run <code>python cli.py verify proof.json</code> entirely offline. The proof either verifies cryptographically or it doesn't.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h4>What regulations does this support?</h4>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Provable AI is built for teams operating under <strong>SR 11-7</strong> (model risk management), <strong>EU AI Act</strong> high-risk system requirements, and <strong>CFPB</strong> adverse action explainability obligations. The proof artifact provides the cryptographic decision trail these frameworks require &mdash; with documentation support included in the pilot.
-          </div>
-        </div>
+        <div class="faq-q" onclick="toggleFaq(this)"><h4>What regulations does this support?</h4><span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Provable AI is built for teams operating under <strong>SR 11-7</strong> (model risk management), <strong>EU AI Act</strong> high-risk system requirements, and <strong>CFPB</strong> adverse action explainability obligations. Documentation support included in the pilot.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h4>What happens if a model is updated between decisions?</h4>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Every proof artifact captures the <strong>exact model version</strong> at decision time. If a new model version is deployed, the governance layer detects the version change and the new version must be approved before it can execute. Unauthorized model versions are blocked at runtime &mdash; so the audit trail is always accurate, even across model updates.
-          </div>
-        </div>
+        <div class="faq-q" onclick="toggleFaq(this)"><h4>What happens if a model is updated between decisions?</h4><span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Every proof artifact captures the <strong>exact model version</strong> at decision time. Unauthorized model versions are blocked at runtime &mdash; so the audit trail is always accurate, even across model updates.</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h4>Is the source code available?</h4>
-          <span class="faq-icon">+</span>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Yes. The full source is available on <a href="https://github.com/futureaihub/provable-ai" target="_blank" style="color:var(--green)">GitHub</a> under the Zorynex Source-Available License. You can view, download, and evaluate the software for non-commercial purposes. Production deployment and enterprise integration require a commercial license &mdash; contact <a href="mailto:hanif@zorynex.co" style="color:var(--green)">hanif@zorynex.co</a>.
-          </div>
-        </div>
+        <div class="faq-q" onclick="toggleFaq(this)"><h4>Is the source code available?</h4><span class="faq-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. The full source is available on <a href="https://github.com/futureaihub/provable-ai" target="_blank" style="color:var(--green)">GitHub</a> under the Zorynex Source-Available License. Production deployment requires a commercial license &mdash; contact <a href="mailto:hanif@zorynex.co" style="color:var(--green)">hanif@zorynex.co</a>.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PILOT -->
 <section class="pilot" id="pilot">
   <div class="container">
     <div class="sec-label">90-day pilot</div>
@@ -581,7 +439,7 @@ footer a{color:var(--green);text-decoration:none}
         <a href="https://github.com/futureaihub/provable-ai" target="_blank" class="btn-ghost" style="display:inline-block;margin-top:8px">View GitHub repo &rarr;</a>
       </div>
       <div>
-        <form class="form" action="https://formspree.io/f/maqpajvw" method="POST" onsubmit="handleSubmit(event)">
+        <form class="form" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="fg"><label>First name</label><input type="text" name="first_name" placeholder="Annie" required></div>
             <div class="fg"><label>Last name</label><input type="text" name="last_name" placeholder="Delgado" required></div>
@@ -605,7 +463,6 @@ footer a{color:var(--green);text-decoration:none}
             <label>Biggest AI audit challenge</label>
             <textarea name="ai_audit_challenge" placeholder="Tell us about your current model governance setup and the gap you're trying to close..."></textarea>
           </div>
-          <input type="hidden" name="_subject" value="New Pilot Application - Zorynex">
           <button type="submit" class="form-btn">Apply for pilot &rarr;</button>
           <p id="msg">&#10003; Received. Hanif will reply within 24 hours.</p>
         </form>
@@ -629,13 +486,30 @@ const obs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 
 function handleSubmit(e) {
-  const btn = e.target.querySelector('.form-btn');
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.form-btn');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Sent';
-    document.getElementById('msg').style.display = 'block';
-  }, 1200);
+  fetch('https://formspree.io/f/maqpajvw', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(res => {
+    if (res.ok) {
+      btn.textContent = 'Sent \u2713';
+      document.getElementById('msg').style.display = 'block';
+      form.reset();
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  });
 }
 
 function toggleFaq(el) {
