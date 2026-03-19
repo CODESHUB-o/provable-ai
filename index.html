@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="UlYcHD25Cl3ctedGHhCN4tATJCQ94ilIWhhuhJfp1Rg" />  
+<meta name="google-site-verification" content="UlYcHD25Cl3ctedGHhCN4tATJCQ94ilIWhhuhJfp1Rg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080909'/><line x1='20' y1='28' x2='80' y2='28' stroke='%2300e5a0' stroke-width='10' stroke-linecap='round'/><line x1='80' y1='28' x2='20' y2='72' stroke='%2300e5a0' stroke-width='10' stroke-linecap='round'/><line x1='20' y1='72' x2='80' y2='72' stroke='%2300e5a0' stroke-width='10' stroke-linecap='round'/><circle cx='68' cy='80' r='16' fill='%23080909'/><circle cx='68' cy='80' r='13' fill='%23080909' stroke='%2300e5a0' stroke-width='3'/><polyline points='61,80 66,86 76,73' fill='none' stroke='%2300e5a0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <title>Zorynex — Provable AI Infrastructure</title>
 <meta name="description" content="Cryptographically verifiable AI decisions. Every decision your AI makes becomes a signed proof artifact — independently verifiable by regulators, auditors, and enterprise clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +22,7 @@ html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,229,160,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,160,.015) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(8,9,9,.88);backdrop-filter:blur(20px)}
-.nav-logo{font-family:var(--font-display);font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--white);text-decoration:none}
-.nav-logo span{color:var(--green)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
 .nav-links{display:flex;gap:36px;list-style:none}
 .nav-links a{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--green)}
@@ -141,8 +141,7 @@ section{position:relative;z-index:1}
 .form-btn:hover{background:#00ffb3}
 #msg{font-family:var(--font-mono);font-size:12px;color:var(--green);margin-top:6px;display:none}
 footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-items:center;justify-content:space-between}
-.footer-logo{font-family:var(--font-display);font-size:16px;font-weight:800;letter-spacing:-.02em}
-.footer-logo span{color:var(--green)}
+.footer-logo{display:flex;align-items:center}
 footer p,footer a{font-family:var(--font-mono);font-size:11px;color:var(--muted)}
 footer a{color:var(--green);text-decoration:none}
 .fu{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
@@ -153,7 +152,17 @@ footer a{color:var(--green);text-decoration:none}
 </head>
 <body>
 <nav>
-  <a href="#" class="nav-logo">Zorynex<span>.</span></a>
+  <a href="#" class="nav-logo">
+    <svg height="36" viewBox="0 0 220 52" xmlns="http://www.w3.org/2000/svg">
+      <line x1="8" y1="7" x2="44" y2="7" stroke="#00e5a0" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="44" y1="7" x2="8" y2="37" stroke="#00e5a0" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="8" y1="37" x2="44" y2="37" stroke="#00e5a0" stroke-width="5.5" stroke-linecap="round"/>
+      <circle cx="37" cy="41" r="9" fill="#080909"/>
+      <circle cx="37" cy="41" r="7.5" fill="#080909" stroke="#00e5a0" stroke-width="2"/>
+      <polyline points="32,41 36,45.5 43,36" fill="none" stroke="#00e5a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="58" y="30" font-family="'Syne',sans-serif" font-size="26" font-weight="800" fill="#f0f4f4" letter-spacing="-1">Zorynex</text>
+    </svg>
+  </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#flow">How it works</a></li>
@@ -472,7 +481,17 @@ footer a{color:var(--green);text-decoration:none}
 </section>
 
 <footer>
-  <div class="footer-logo">Zorynex<span>.</span></div>
+  <div class="footer-logo">
+    <svg height="28" viewBox="0 0 180 42" xmlns="http://www.w3.org/2000/svg">
+      <line x1="6" y1="6" x2="36" y2="6" stroke="#00e5a0" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="36" y1="6" x2="6" y2="30" stroke="#00e5a0" stroke-width="4.5" stroke-linecap="round"/>
+      <line x1="6" y1="30" x2="36" y2="30" stroke="#00e5a0" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="30" cy="33" r="7" fill="#080909"/>
+      <circle cx="30" cy="33" r="6" fill="#080909" stroke="#00e5a0" stroke-width="1.8"/>
+      <polyline points="25,33 29,37 35,28" fill="none" stroke="#00e5a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="24" font-family="'Syne',sans-serif" font-size="20" font-weight="800" fill="#f0f4f4" letter-spacing="-0.5">Zorynex</text>
+    </svg>
+  </div>
   <p>Provable AI Infrastructure &middot; <a href="mailto:hanif@zorynex.co">hanif@zorynex.co</a></p>
   <p>&copy; 2026 Zorynex &middot; <a href="https://github.com/futureaihub/provable-ai" target="_blank">GitHub</a></p>
 </footer>
